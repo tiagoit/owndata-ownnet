@@ -190,7 +190,7 @@ class RealtimeClass extends AdapterService {
       }
       const ts = new Date();
       return this.remoteService.find(newParams).then(page => {
-        const res = page.data ? page.data : page;
+        let res = page.data ? page.data : page;
         if (!Array.isArray(res)) {
           res = [res];
         }
@@ -226,7 +226,7 @@ class RealtimeClass extends AdapterService {
       }
       const ts = new Date();
       return this.remoteService.find(newParams).then(page => {
-        const res = page.data ? page.data : page;
+        let res = page.data ? page.data : page;
         if (!Array.isArray(res)) {
           res = [res];
         }
